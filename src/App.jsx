@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Search from './components/Search';
 
 const API_BASE_URL = 'https://api.themovidb.org/3';
@@ -24,7 +24,7 @@ function App() {
     try {
 
     } catch (error) {
-      console.error(`Error fetching moveis: ${error}`)
+      console.error(`Error fetching movies: ${error}`);
     }
   }
 
@@ -42,6 +42,12 @@ function App() {
             Find <span className="text-gradient">Movies</span> You'll Love Without the Hassle
             </h1>
           </header>
+
+          <section className="all-movies">
+            <h2>All Movies</h2>
+
+            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+          </section>
 
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           <h1 className="text-white">{searchTerm}</h1>
