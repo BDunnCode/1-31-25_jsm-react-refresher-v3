@@ -19,10 +19,10 @@ const MovieCard = ({ movie:
                     <img src="star.svg" alt="Star Icon" />
                     <p>{vote_average ? vote_average.toFixed(1) : 'N/A'}</p>
                     
-                    <span>dotgoeshere</span>
+                    <span>•</span>
                     <p className="lang">{original_language}</p>
                     
-                    <span>dotgoeshere</span>
+                    <span>•</span>
                     <p className="year">
                         {release_date ? release_date.split('-')[0] : 'N/A'}
                     </p>

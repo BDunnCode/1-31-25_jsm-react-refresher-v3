@@ -100,6 +100,8 @@ function App() {
             </h1>
           </header>
 
+          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
           {trendingMovies.length > 0 && (
             <section className="trending">
               <h2>Trending Movies</h2>
@@ -132,8 +134,6 @@ function App() {
 
           </section>
 
-          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-          <h1 className="text-white">{searchTerm}</h1>
         </div>
       </div>
     </main>
